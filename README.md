@@ -911,7 +911,7 @@ update a deploy: nginx nginx 2021-05-03 16:03:52
 
 Informers 是 client-go 中非常重要得概念，接下来我们来仔细分析下 Informers 的实现原理，下图是 client-go 的官方实现架构图：
 
-![image](https://github.com/Mountains-and-rivers/k8s-informers/blob/main/images/02.png)
+![image](https://github.com/Mountains-and-rivers/k8s-informers/blob/main/images/02.jpeg)
 
 **Reflector（反射器）**
 
