@@ -720,7 +720,7 @@ type Event struct {
 
 一个控制器每次需要获取对象的时候都要访问 APIServer，这会给系统带来很高的负载，Informers 的内存缓存就是来解决这个问题的，此外 Informers 还可以几乎实时的监控对象的变化，而不需要轮询请求，这样就可以保证客户端的缓存数据和服务端的数据一致，就可以大大降低 APIServer 的压力了。
 
-![https://bxdc-static.oss-cn-beijing.aliyuncs.com/images/20200727110511.png](https://bxdc-static.oss-cn-beijing.aliyuncs.com/images/20200727110511.png)
+![image](https://github.com/Mountains-and-rivers/k8s-informers/blob/main/images/01.png)
 
 Informers
 
@@ -911,7 +911,7 @@ update a deploy: nginx nginx 2021-05-03 16:03:52
 
 Informers 是 client-go 中非常重要得概念，接下来我们来仔细分析下 Informers 的实现原理，下图是 client-go 的官方实现架构图：
 
-![https://bxdc-static.oss-cn-beijing.aliyuncs.com/images/client-go-controller-interaction.jpeg](https://bxdc-static.oss-cn-beijing.aliyuncs.com/images/client-go-controller-interaction.jpeg)
+![image](https://github.com/Mountains-and-rivers/k8s-informers/blob/main/images/02.png)
 
 **Reflector（反射器）**
 
