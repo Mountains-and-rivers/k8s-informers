@@ -563,6 +563,10 @@ type sharedProcessor struct {
 ##### 启动
 
 工作机制流程图
+	
+	![images](https://github.com/Mountains-and-rivers/k8s-informers/blob/main/images/03.png)
+	
+	
 
 ##### k8s.ioo/client-go/tools/cache.sharedIndexInformer.Run
 
