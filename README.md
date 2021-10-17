@@ -169,6 +169,20 @@ func homeDir() string {
   - tweakListOptions：设置请求参数
 
 ```
+type sharedInformerFactory struct {
+	client           kubernetes.Interface
+	namespace        string
+	tweakListOptions internalinterfaces.TweakListOptionsFunc
+	lock             sync.Mutex
+	defaultResync    time.Duration
+	customResync     map[reflect.Type]time.Duration
+
+	informers map[reflect.Type]cache.SharedIndexInformer
+	// startedInformers is used for tracking which informers have been started.
+	// This allows Start() to be called multiple times safely.
+	startedInformers map[reflect.Type]bool
+}
+
 // NewFilteredSharedInformerFactory constructs a new instance of sharedInformerFactory.
 // Listers obtained via this SharedInformerFactory will be subject to the same filters
 // as specified here.
